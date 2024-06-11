@@ -137,6 +137,7 @@
             gitPlugins = with pkgs.neovimPlugins; [ ];
             general = with pkgs.vimPlugins; [
               telescope-nvim
+              telescope-file-browser-nvim
               lualine-nvim
 
               # git stuff

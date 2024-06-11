@@ -136,6 +136,9 @@
             customPlugins = with pkgs.nixCatsBuilds; [ ];
             gitPlugins = with pkgs.neovimPlugins; [ ];
             general = with pkgs.vimPlugins; [ telescope-nvim ];
+            themer =
+              with pkgs.vimPlugins;
+              (builtins.getAttr categories.colorscheme { "rose-pine" = rose-pine; });
           };
 
           # not loaded automatically at startup.
@@ -217,6 +220,8 @@
               gitPlugins = true;
               customPlugins = true;
               generalBuildInputs = true;
+              themer = true;
+              colorscheme = "rose-pine";
               test = true;
               example = {
                 youCan = "add more than just booleans";

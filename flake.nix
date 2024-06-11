@@ -137,7 +137,10 @@
             gitPlugins = with pkgs.neovimPlugins; [ ];
             general = with pkgs.vimPlugins; [
               telescope-nvim
-              lualine
+              lualine-nvim
+
+              # git stuff
+              gitsigns-nvim
             ];
             themer =
               with pkgs.vimPlugins;

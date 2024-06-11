@@ -135,7 +135,10 @@
           startupPlugins = {
             customPlugins = with pkgs.nixCatsBuilds; [ ];
             gitPlugins = with pkgs.neovimPlugins; [ ];
-            general = with pkgs.vimPlugins; [ telescope-nvim ];
+            general = with pkgs.vimPlugins; [
+              telescope-nvim
+              lualine
+            ];
             themer =
               with pkgs.vimPlugins;
               (builtins.getAttr categories.colorscheme { "rose-pine" = rose-pine; });

@@ -135,7 +135,7 @@
           startupPlugins = {
             customPlugins = with pkgs.nixCatsBuilds; [ ];
             gitPlugins = with pkgs.neovimPlugins; [ ];
-            general = with pkgs.vimPlugins; [ ];
+            general = with pkgs.vimPlugins; [ telescope-nvim ];
           };
 
           # not loaded automatically at startup.
